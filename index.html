@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Música para la vida</title>
+
+    <!-- Bootstrap CSS desde CDN -->
+     <!-- CDN de FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Vinculamos las fuentes personalizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="css/stilos.css" rel="stylesheet"> <!-- Aquí vinculamos el CSS -->
+    
+    <style>
+        /* Carrusel */
+        .carousel-item {
+            transition: transform 0.5s ease; /* Añade la transición suave */
+        }
+
+        .carousel-item img,
+        .carousel-item video {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+<!-- Nueva barra de navegación -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <img src="imagenes/logo.png" alt="Logo" class="logo"> Música para la vida
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre nosotros</a>
+              </li>
+          </ul>
+          <form class="d-flex ms-auto" role="search">
+              <a href="apoyanos.html" class="btn btn-dark">Apóyanos</a>
+          </form>
+      </div>
+  </div>
+</nav>
+
+   <!-- Hero Section con texto y la imagen -->
+   <section class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <!-- Texto en el lado izquierdo -->
+            <div class="col-lg-6 text-left">
+                <h1 class="animated-text">Disfruta de la mejor <br> Música para la vida en <span id="dynamic-text">Londres</span></h1>
+                <p class="lead">Tu viaje musical empieza aquí</p>
+            </div>
+            <!-- Carrusel en el lado derecho -->
+            <div class="col-lg-6 text-center">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes/BEABLOG_vertical.png" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/imagen 2.jpg" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/imagen 3.avif" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                        <div class="carousel-item">
+                            <video class="d-block w-100" autoplay muted loop>
+                                <source src="videos/Nicki Nicole canta “Dispara” en vivo en La Velada del Año 3.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Curva SVG -->
+<div class="wave">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M0,60 C150,100 350,20 500,60 L500,00 L0,0 Z" style="stroke: none; fill:#000000;"></path>
+  </svg>
+</div>
+
+<!-- Sección de Testimonios -->
+<section class="testimonios bg-dark text-white py-5">
+  <div class="container">
+      <h2 class="text-center mb-5">Testimonios</h2>
+      <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <!-- Testimonio 1 -->
+              <div class="carousel-item active text-center">
+                  <img src="imagenes/retrato.avif" class="rounded-circle mb-4" alt="Testimonio 1" width="150" height="150">
+                  <h5>Juan Pérez</h5>
+                  <p>"Conocí la música de una manera profunda, cambió mi vida y me ayudó a expresar emociones que nunca antes pude."</p>
+              </div>
+              <!-- Testimonio 2 -->
+              <div class="carousel-item text-center">
+                  <img src="imagenes/retrato.avif" class="rounded-circle mb-4" alt="Testimonio 2" width="150" height="150">
+                  <h5>Laura Gómez</h5>
+                  <p>"La música me brindó paz en momentos difíciles. Ahora no puedo imaginar mi vida sin ella."</p>
+              </div>
+              <!-- Testimonio 3 -->
+              <div class="carousel-item text-center">
+                  <img src="imagenes/retrato.avif" class="rounded-circle mb-4" alt="Testimonio 3" width="150" height="150">
+                  <h5>Marcos Fernández</h5>
+                  <p>"A través de la música, encontré una forma de conectar con mi ser interior y con los demás."</p>
+              </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+          </button>
+      </div>
+  </div>
+</section>
+<!-- Sección de Concientización -->
+<section class="awareness-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+        <div class="video-container">
+          <video controls>
+            <source src="videos/Download.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-3">La música: una vía de escape hacia una vida auténtica</h2>
+        <p class="lead mb-3">
+          Las drogas pueden parecer una salida fácil para escapar de los problemas, pero con el tiempo dejan un vacío emocional.
+        </p>
+        <ul class="mb-4">
+          <li>Canaliza tus emociones a través de la música.</li>
+          <li>Encuentra una comunidad que comparta tu pasión.</li>
+          <li>Rompe los ciclos negativos y transforma tu vida con arte.</li>
+        </ul>
+        <a href="apoyanos.html" class="btn btn-success">Apóyanos y únete a la música</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center">
+        <p>© 2024 Música para la vida. Todos los derechos reservados.</p>
+        <div class="social-icons d-flex justify-content-center">
+            <a href="https://www.youtube.com" target="_blank" class="me-3">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Botón de subir al inicio con icono -->
+<button onclick="scrollToTop()" id="btnScrollTop" class="btn-scroll-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script> <!-- Vinculamos el JavaScript para texto dinámico -->
+<!-- CDN de FontAwesome (Ya lo tienes incluido, pero por si acaso) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</body>
+</html>
